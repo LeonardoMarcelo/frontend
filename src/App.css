@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(240, 236, 236) !important;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search {
   display: flex;
-  flex-direction: column;
+  justify-content: end;
+}
+.items {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.left {
+  margin-left: -150px;
+  font-size: 26px;
+  font-weight: bold;
+}
+.table thead .tr {
+  color: rgb(195, 184, 184);
+  font-size: 12px;
+}
+td {
+  font-weight: bold !important;
+}
+td,
+tr {
+    text-align: center !important;
 }
 
-.App-link {
-  color: #61dafb;
+.dia,
+.atenção,
+.critíco {
+  padding: 12px 40px !important;
+  color: #fff;
+}
+.dia {
+  background-color: green !important;
+}
+.atenção {
+  background-color: royalblue !important;
+}
+.critíco {
+  background-color: red !important;
+}
+.rightBtn {
+  display: flex;
+  justify-content: end;
+}
+.modal-content{
+ width: 800px !important;
+
+}
+.row{
+  gap:0  60px !important;
+}
+.col-6{
+  display: flex;
+  /* gap: 15px; */
+  flex-direction: column;
+}
+@media (max-width: 900px) {
+  .left{
+    margin-left: 0;
+  }
+  .modal-content{
+    width: 100% !important;
+   }
+}
+@media (min-width: 576px){
+  .modal-dialog {
+    max-width: 50% !important;
+    margin: 1.75rem auto !important;
+}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
